@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm run build-frontend && npm run server",
+    "start": "cd backend && npm start",
     "server": "cd backend && npm run dev",
     "build-frontend": "cd frontend && npm run build",
     "build": "cd frontend && npm run build",
     "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "postinstall": "npm run build",
     "test": "node test-sanity.js",
     "test-browser": "node test-browser.js",
-    "test-all": "npm run test && npm run test-browser"
+    "test-all": "npm run test && npm run test-browser",
+    "render-build": "npm run install-all && npm run build",
+    "render-start": "cd backend && npm start"
   },
   "keywords": ["ycd", "spotify", "playlist", "music", "wizard", "converter"],
   "author": "Ofer Bachner",

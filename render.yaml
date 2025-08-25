@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: ycd-alchemist
+    env: node
+    plan: free
+    buildCommand: npm run install-all && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: SPOTIFY_CLIENT_ID
+        sync: false
+      - key: SPOTIFY_CLIENT_SECRET
+        sync: false
+      - key: SPOTIFY_REDIRECT_URI
+        value: https://ycd-alchemist.onrender.com/api/callback
+    autoDeploy: true
+    branch: main
+    rootDir: .
+    disk:
+      name: ycd-alchemist-disk
+      mountPath: /opt/render/project/src
+      sizeGB: 1
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /static/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
