@@ -2,13 +2,16 @@
 
 /**
  * YCD Alchemist - Entry Point
- * Changes to backend directory and starts the server
+ * Starts the backend server with proper path resolution
  */
 
 const path = require('path');
 
-// Change to backend directory
+// Get the absolute path to the server file
+const serverPath = path.join(__dirname, 'backend', 'server.js');
+
+// Change to backend directory for proper dependency resolution
 process.chdir(path.join(__dirname, 'backend'));
 
-// Require the server
-require('./server.js');
+// Require the server using absolute path
+require(serverPath);
