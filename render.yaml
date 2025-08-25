@@ -3,8 +3,8 @@ services:
     name: ycd-alchemist
     env: node
     plan: free
-    buildCommand: npm run render-build
-    startCommand: npm run render-start
+    buildCommand: npm install && cd backend && npm install && cd ../frontend && npm install && npm run build
+    startCommand: node index.js
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
