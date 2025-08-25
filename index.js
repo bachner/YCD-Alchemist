@@ -2,7 +2,8 @@
 
 /**
  * YCD Alchemist - Entry Point
- * Redirects to the backend server
+ * Changes to backend directory and starts the server
  */
 
-require('./backend/server.js');
+process.chdir('./backend');
+require('./server.js');
