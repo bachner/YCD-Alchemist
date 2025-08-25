@@ -2,7 +2,7 @@
   "name": "ycd-alchemist",
   "version": "1.0.0",
   "description": "🧪 YCD Alchemist - Transform YCD files into Spotify playlists with alchemical magic!",
-  "main": "index.js",
+  "main": "backend/server.js",
   "scripts": {
     "dev": "npm run build-frontend && npm run server",
     "start": "cd backend && npm start",
