@@ -5,5 +5,10 @@
  * Changes to backend directory and starts the server
  */
 
-process.chdir('./backend');
+const path = require('path');
+
+// Change to backend directory
+process.chdir(path.join(__dirname, 'backend'));
+
+// Require the server
 require('./server.js');
