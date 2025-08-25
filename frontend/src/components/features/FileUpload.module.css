@@ -1,0 +1,168 @@
+.fileUploadSection {
+  margin-bottom: 2rem;
+}
+
+.uploadCard {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadContent {
+  text-align: center;
+  max-width: 400px;
+}
+
+.uploadIcon {
+  color: #1db954;
+  margin-bottom: 1rem;
+}
+
+.uploadTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 0.5rem 0;
+}
+
+.uploadText {
+  color: #6c757d;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.uploadHint {
+  color: #adb5bd;
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.dragover {
+  border-color: #1ed760;
+  background: rgba(29, 185, 84, 0.15);
+  transform: scale(1.05);
+}
+
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  z-index: 10;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1db954;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Clear card styles */
+.clearCard {
+  background: linear-gradient(135deg, #f8fff9 0%, #e8f5e8 100%);
+  border: 2px solid #28a745;
+}
+
+.clearContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.uploadStatus {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.statusIcon {
+  color: #28a745;
+}
+
+.statusText h3 {
+  margin: 0 0 0.25rem 0;
+  color: #28a745;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.statusText p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.clearButton {
+  flex-shrink: 0;
+}
+
+.statsSection {
+  margin-top: 2rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.statIcon {
+  color: #1db954;
+  margin-bottom: 0.5rem;
+}
+
+.statNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 0.25rem;
+}
+
+.statLabel {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .clearContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .uploadStatus {
+    flex-direction: column;
+    text-align: center;
+  }
+}

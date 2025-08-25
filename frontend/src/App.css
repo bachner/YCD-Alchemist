@@ -1,0 +1,24 @@
+/* Global styles using Tailwind CSS */
+
+.App {
+  @apply min-h-screen flex flex-col;
+}
+
+.main-content {
+  @apply flex-1 py-8;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+  
+  .main-content {
+    @apply py-4;
+  }
+}

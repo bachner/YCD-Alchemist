@@ -1,0 +1,31 @@
+.inputContainer {
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: '"Noto Sans Hebrew", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif';
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1db954;
+  box-shadow: 0 0 0 3px rgba(29, 185, 84, 0.1);
+}
+
+.input::placeholder {
+  color: #6c757d;
+  opacity: 0.7;
+}

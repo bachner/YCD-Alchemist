@@ -1,0 +1,44 @@
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.default {
+  /* Default card styling */
+}
+
+.success {
+  border: 3px solid #28a745;
+  background: linear-gradient(135deg, #f8fff9 0%, #e8f5e8 100%);
+  box-shadow: 0 8px 32px rgba(40, 167, 69, 0.2);
+}
+
+.upload {
+  border: 2px dashed #1db954;
+  background: rgba(29, 185, 84, 0.05);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload:hover {
+  border-color: #1ed760;
+  background: rgba(29, 185, 84, 0.1);
+  transform: scale(1.02);
+}
+
+.upload.dragover {
+  border-color: #1ed760;
+  background: rgba(29, 185, 84, 0.15);
+  transform: scale(1.05);
+}

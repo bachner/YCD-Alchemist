@@ -1,0 +1,100 @@
+.successCard {
+  margin-top: 2rem;
+}
+
+.successMessage {
+  /* Success message container */
+}
+
+.successHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.successIcon {
+  margin-bottom: 1rem;
+}
+
+.successHeader h3 {
+  color: #28a745;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.successHeader p {
+  color: #6c757d;
+  margin: 0;
+}
+
+.playlistDetails {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.detailItem {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detailItem:last-child {
+  margin-bottom: 0;
+}
+
+.detailItem strong {
+  color: #212529;
+  min-width: 120px;
+}
+
+.trackCount {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.warning {
+  color: #dc3545;
+  margin-left: 8px;
+}
+
+.playlistLink {
+  color: #007bff;
+  text-decoration: underline;
+  word-break: break-all;
+  font-weight: bold;
+}
+
+.playlistLink:hover {
+  color: #0056b3;
+}
+
+.playlistActions {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.actionButton {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .playlistActions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .actionButton {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}

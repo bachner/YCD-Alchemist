@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply font-sans bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-screen text-gray-100;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card hover:bg-white/15 hover:border-white/30 transition-all duration-300 hover:shadow-2xl;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl border-0;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-gray-900 font-bold py-4 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-gray-300 text-gray-300 hover:border-emerald-400 hover:text-emerald-400 font-bold py-3 px-6 rounded-xl transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-6 py-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-2xl focus:outline-none focus:ring-4 focus:ring-emerald-400/50 focus:border-emerald-400 transition-all duration-300 text-gray-100 placeholder-gray-400;
+  }
+
+  .loading-spinner {
+    @apply w-10 h-10 border-4 border-gray-400 border-t-emerald-400 rounded-full animate-spin;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent;
+  }
+}
+
+/* Custom utility styles */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+}
