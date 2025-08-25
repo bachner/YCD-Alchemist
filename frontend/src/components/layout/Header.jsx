@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogOut } from 'lucide-react';
+import { LogOut, Github } from 'lucide-react';
 
 const Header = ({ 
   isConnected, 
@@ -14,8 +14,19 @@ const Header = ({
           <p className="text-white/80 text-sm text-shadow">Transform your YCD files into Spotify playlists</p>
         </div>
         
-        {isConnected && (
-          <div className="auth-section">
+        <div className="header-actions flex items-center space-x-4">
+          <a
+            href="https://github.com/bachner/YCD-Alchemist"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/70 hover:text-emerald-400 transition-colors duration-200 flex items-center space-x-1 text-sm"
+            title="View source code on GitHub"
+          >
+            <Github size={16} />
+            <span className="hidden sm:inline">GitHub</span>
+          </a>
+          
+          {isConnected && (
             <button 
               onClick={onDisconnect}
               className="btn-secondary flex items-center space-x-2"
@@ -23,8 +34,8 @@ const Header = ({
               <LogOut size={16} />
               <span>Disconnect</span>
             </button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </header>
   );
