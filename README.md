@@ -30,8 +30,8 @@ Transform YCD files into Spotify playlists with alchemical magic! A modern, full
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/ycd-alchemist.git
-   cd ycd-alchemist
+   git clone https://github.com/bachner/YCD-Alchemist.git
+   cd YCD-Alchemist
    ```
 
 2. **Install dependencies**
@@ -94,8 +94,7 @@ ycd-alchemist/
 - Authorize the application to access your Spotify account
 
 ### 2. Upload YCD File
-- Drag and drop a YCD file or click to browse
-- Supported formats: `.ycd`, `.m3u`, `.m3u8`, `.txt`
+- Drag and drop a `.ycd` file or click to browse
 - Maximum file size: 10MB
 
 ### 3. Review Matches
@@ -224,7 +223,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Ofer Bachner**
 
-- GitHub: [@your-username](https://github.com/bachner)
+- GitHub: [@Bachner](https://github.com/bachner)
 - Email: bachner@gmail.com
 
 ## 🙏 Acknowledgments

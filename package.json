@@ -17,6 +17,14 @@
     "render-build": "npm run install-all && npm run build",
     "render-start": "cd backend && npm start"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bachner/YCD-Alchemist.git"
+  },
+  "homepage": "https://github.com/bachner/YCD-Alchemist#readme",
+  "bugs": {
+    "url": "https://github.com/bachner/YCD-Alchemist/issues"
+  },
   "keywords": ["ycd", "spotify", "playlist", "music", "wizard", "converter"],
   "author": "Ofer Bachner",
   "license": "MIT",

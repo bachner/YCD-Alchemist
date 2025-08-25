@@ -582,6 +582,16 @@ function App() {
 
       <footer className="text-center py-8 text-gray-400">
         <p>✨ Created with alchemical magic by <span className="text-emerald-400 font-semibold">Ofer Bachner</span> ✨</p>
+        <p className="mt-2">
+          <a 
+            href="https://github.com/bachner/YCD-Alchemist" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-emerald-400 hover:text-emerald-300 transition-colors duration-200 font-medium"
+          >
+            🔗 View on GitHub
+          </a>
+        </p>
       </footer>
     </div>
   );

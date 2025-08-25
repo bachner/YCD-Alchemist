@@ -37,6 +37,8 @@ Before deploying, ensure you have:
    git clone https://github.com/bachner/YCD-Alchemist.git
    cd YCD-Alchemist
    ```
+   
+   **📋 Repository**: [https://github.com/bachner/YCD-Alchemist](https://github.com/bachner/YCD-Alchemist)
 
 2. **Connect to Render**:
    - Go to [Render Dashboard](https://dashboard.render.com)
