@@ -68,17 +68,36 @@ let refreshToken = null;
 // Helper function to parse YCD file
 async function parseYCDFile(fileBuffer) {
   try {
-    // Detect if the file contains Hebrew characters
-    const content = fileBuffer.toString('utf8');
-    const hasHebrew = /[\u0590-\u05FF]/.test(content);
+    const iconv = require('iconv-lite');
+    
+    // First try UTF-8 decoding
+    const utf8Content = fileBuffer.toString('utf8');
+    
+    // Check if content has Hebrew Unicode characters (already properly encoded)
+    const hasUnicodeHebrew = /[\u0590-\u05FF]/.test(utf8Content);
+    
+    // Check if content has suspicious characters that might be Hebrew in wrong encoding
+    const hasSuspiciousChars = /[����������������������������������]/.test(utf8Content);
     
     let fileContent;
-    if (hasHebrew) {
-      // Use iconv-lite to decode Hebrew text properly
-      const iconv = require('iconv-lite');
+    if (hasUnicodeHebrew) {
+      // Content is already properly UTF-8 encoded with Hebrew
+      fileContent = utf8Content;
+      console.log('🔤 Detected UTF-8 Hebrew content');
+    } else if (hasSuspiciousChars) {
+      // Content likely has Hebrew in Windows-1255 encoding
       fileContent = iconv.decode(fileBuffer, 'win1255');
+      console.log('🔤 Detected Windows-1255 Hebrew content, converting to UTF-8');
     } else {
-      fileContent = content;
+      // Try Windows-1255 anyway and see if it produces Hebrew characters
+      const win1255Content = iconv.decode(fileBuffer, 'win1255');
+      if (/[\u0590-\u05FF]/.test(win1255Content)) {
+        fileContent = win1255Content;
+        console.log('🔤 Detected Hebrew after Windows-1255 conversion');
+      } else {
+        fileContent = utf8Content;
+        console.log('🔤 Using UTF-8 content (no Hebrew detected)');
+      }
     }
 
     const lines = fileContent.split('\n').map(line => line.trim()).filter(line => line);
